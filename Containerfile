@@ -54,7 +54,7 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 
-COPY configs/etc/greetd/config.toml /etc/gretd/config.toml
+COPY configs/etc/ /etc/
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
