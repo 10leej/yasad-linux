@@ -18,6 +18,9 @@ rpm-ostree install sway swayidle swaylock grim slurp wl-clipboard vim htop iftop
 # this would install a package from rpmfusion
 rpm-ostree install mpv yt-dlp
 
+### This is a graphical system
+systemctl set-default graphical.target
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
