@@ -1,0 +1,8 @@
+[Unit]
+Description=iso build for yasad linux
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Service]
+Type=oneshot
+ExecStart=docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=missing ghcr.io/jasonn3/build-container-installer:latest VERSION=40 IMAGE_REPO=ghcr.io/10leej IMAGE_NAME=yasad-linux IMAGE_TAG=latest VARIANT=server
